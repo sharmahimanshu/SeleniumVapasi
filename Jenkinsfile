@@ -5,6 +5,7 @@ pipeline {
         maven 'maven_3_6_3'
         jdk 'jdk8'
     }
+
     stages {
         stage ('Compile Stage') {
             steps {
@@ -13,7 +14,7 @@ pipeline {
         }
         stage ('Testing Stage') {
             steps {
-                   sh 'mvn clean compile'
+                   sh 'mvn clean test'
             }
         }
         stage ('Deployment Stage') {
