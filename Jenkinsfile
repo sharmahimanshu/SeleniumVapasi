@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage ('Compile Stage') {
             steps {
-                   bat 'mvn clean compile'
+                    mvn clean compile
             }
         }
         stage ('Testing Stage') {
             steps {
-                    bat 'mvn clean compile'
+                    mvn clean compile
             }
         }
         stage ('Deployment Stage') {
             steps {
-                    bat 'mvn clean compile'
+                    mvn clean compile
             }
         }
     }
