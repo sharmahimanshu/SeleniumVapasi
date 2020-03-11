@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite3" duration-ms="9366" started-at="2020-03-03T11:22:56Z" finished-at="2020-03-03T11:23:05Z">
+    <groups>
+    </groups>
+    <test name="test4" duration-ms="5660" started-at="2020-03-03T11:22:56Z" finished-at="2020-03-03T11:23:01Z">
+      <class name="DemoCrossBrowserTest">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:DemoCrossBrowserTest@15bfd87]" name="setup" is-config="true" duration-ms="4626" started-at="2020-03-03T16:52:56Z" finished-at="2020-03-03T16:53:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test()[pri:0, instance:DemoCrossBrowserTest@15bfd87]" name="test" duration-ms="602" started-at="2020-03-03T16:53:00Z" finished-at="2020-03-03T16:53:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:DemoCrossBrowserTest@15bfd87]" name="test1" duration-ms="421" started-at="2020-03-03T16:53:01Z" finished-at="2020-03-03T16:53:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+      </class> <!-- DemoCrossBrowserTest -->
+    </test> <!-- test4 -->
+    <test name="test3" duration-ms="9366" started-at="2020-03-03T11:22:56Z" finished-at="2020-03-03T11:23:05Z">
+      <class name="DemoCrossBrowserTest">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:DemoCrossBrowserTest@1da51a35]" name="setup" is-config="true" duration-ms="7308" started-at="2020-03-03T16:52:56Z" finished-at="2020-03-03T16:53:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test()[pri:0, instance:DemoCrossBrowserTest@1da51a35]" name="test" duration-ms="899" started-at="2020-03-03T16:53:03Z" finished-at="2020-03-03T16:53:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:DemoCrossBrowserTest@1da51a35]" name="test1" duration-ms="1157" started-at="2020-03-03T16:53:04Z" finished-at="2020-03-03T16:53:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+      </class> <!-- DemoCrossBrowserTest -->
+    </test> <!-- test3 -->
+  </suite> <!-- Suite3 -->
+</testng-results>

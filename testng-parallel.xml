@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite3" verbose="1" thread-count="2" parallel="classes">
+    <test name="test3" >
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="DemoCrossBrowserTest" />
+            <class name="DemoCrossBrowserTest2" />
+        </classes>
+    </test>
+    <test name="test4" >
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="DemoCrossBrowserTest" />
+        </classes>
+    </test>
+</suite>
