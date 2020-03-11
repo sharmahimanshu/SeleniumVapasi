@@ -2,10 +2,14 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
+
+import java.net.URL;
 
 public class DemoAlertTest {
 
@@ -13,8 +17,8 @@ public class DemoAlertTest {
 
     @BeforeMethod
     public void setup() throws Exception {
-        System.setProperty("webdriver.chrome.driver", "/Users/lovely.munjal/Downloads/chromedriver");
-        driver = new ChromeDriver();
+        DesiredCapabilities capability = DesiredCapabilities.chrome();
+        driver = new RemoteWebDriver(new URL("http://Jenkins.ip.here:4444/wd/hub"), capability);
         driver.get("http://the-internet.herokuapp.com/javascript_alerts");
     }
 
