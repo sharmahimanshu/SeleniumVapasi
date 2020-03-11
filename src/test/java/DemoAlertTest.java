@@ -1,5 +1,6 @@
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -17,8 +18,11 @@ public class DemoAlertTest {
 
     @BeforeMethod
     public void setup() throws Exception {
-        DesiredCapabilities capability = DesiredCapabilities.chrome();
-        driver = new RemoteWebDriver(new URL("http://Jenkins.ip.here:4444/wd/hub"), capability);
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        capabilities.setBrowserName("chrome");
+        capabilities.setVersion("47");
+        capabilities.setPlatform(Platform.MOJAVE);
+        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
         driver.get("http://the-internet.herokuapp.com/javascript_alerts");
     }
 

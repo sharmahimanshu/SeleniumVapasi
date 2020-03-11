@@ -19,7 +19,7 @@ public class DemoGridTest {
 
         WebDriver driver = null;
         try {
-            driver = new RemoteWebDriver(new URL("http://10.133.124.177:4444/wd/hub"),capabilities);
+            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capabilities);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

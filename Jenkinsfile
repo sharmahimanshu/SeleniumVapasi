@@ -14,6 +14,7 @@ pipeline {
         }
         stage ('Testing Stage') {
             steps {
+                   sh 'java -jar selenium-server-standalone-3.141.59.jar hub'
                    sh 'mvn clean test'
             }
         }
