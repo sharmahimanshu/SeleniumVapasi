@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         maven 'maven_3_6_3'
-        jdk 'jdk8'
+        jdk 'jdk9'
     }
 
     stages {
@@ -14,7 +14,6 @@ pipeline {
         }
         stage ('Testing Stage') {
             steps {
-                   sh 'java -jar selenium-server-standalone-3.141.59.jar hub'
                    sh 'mvn clean test'
             }
         }
