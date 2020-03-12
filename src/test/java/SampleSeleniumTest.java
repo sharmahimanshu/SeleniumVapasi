@@ -19,28 +19,20 @@ public class SampleSeleniumTest {
 	@BeforeClass
 	public void startBrowser() throws MalformedURLException {
         System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
-//		ChromeOptions chromeOptions = new ChromeOptions();
-//		chromeOptions.addArguments("--start-maximized");
-//		driver = new ChromeDriver(chromeOptions);
-        DesiredCapabilities capability = DesiredCapabilities.chrome();
-        WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--start-maximized");
+		driver = new ChromeDriver(chromeOptions);
 	}
 	
 	@Test
-	public void validateGoogleId() throws Exception {
+	public void validateGoogleNavigation() throws Exception {
 		System.out.println("Opening Browser");
 		driver.get("http://www.google.com");
 		System.out.println("Clicking Gmail Link");
 		driver.findElement(By.xpath("//*[@id=\"gbw\"]/div/div/div[1]/div[1]/a")).click();
 		System.out.println("Clicking Sign In link");
-//		driver.findElement(By.xpath("/html/body/nav/div/a[2]")).click();
-//		System.out.println("Entering username");
-//		driver.findElement(By.xpath("//*[@id=\"identifierId\"]")).sendKeys("renju.jenkins.training");
-//		System.out.println("Clicking Next button");
-//		driver.findElement(By.xpath("//*[@id=\"identifierNext\"]/content/span")).click();
-//		Thread.sleep(5000);
-//		boolean textFound = driver.getPageSource().contains("Forgot password");
-//		AssertJUnit.assertTrue(textFound);
+        boolean textFound = driver.getPageSource().contains("Create an account");
+        AssertJUnit.assertTrue(textFound);
 	}
 	
 	@AfterClass
