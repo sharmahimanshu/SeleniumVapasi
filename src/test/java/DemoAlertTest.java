@@ -10,7 +10,8 @@ import org.testng.annotations.*;
 public class DemoAlertTest {
 
     WebDriver driver;
-
+// some comment
+    
     @BeforeMethod
     public void setup() throws Exception {
         System.setProperty("webdriver.chrome.driver", "/Users/lovely.munjal/Downloads/chromedriver");
