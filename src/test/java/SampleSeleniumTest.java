@@ -2,21 +2,28 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.AssertJUnit;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class SampleSeleniumTest {
 	
 	WebDriver driver;
 	
 	@BeforeClass
-	public void startBrowser() {
-		System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
-		ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.addArguments("--start-maximized");
-		driver = new ChromeDriver(chromeOptions);
+	public void startBrowser() throws MalformedURLException {
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+//		ChromeOptions chromeOptions = new ChromeOptions();
+//		chromeOptions.addArguments("--start-maximized");
+//		driver = new ChromeDriver(chromeOptions);
+        DesiredCapabilities capability = DesiredCapabilities.chrome();
+        WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
 	}
 	
 	@Test
